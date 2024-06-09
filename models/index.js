@@ -1,4 +1,5 @@
 // import models
+const sequelize = require('../config/connection');
 const Product = require('./Product');
 const Category = require('./Category');
 const Tag = require('./Tag');
