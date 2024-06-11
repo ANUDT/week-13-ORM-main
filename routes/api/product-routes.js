@@ -17,9 +17,10 @@ const { Product, Category, Tag, ProductTag } = require('../../models');
 });
 
 // get one product
-router.get('/:id', (req, res) => {
+
   // find a single product by its `id`
   // be sure to include its associated Category and Tag data
+  router.get('/:id', (req, res) => {
   Product.findOne({
     where: { id: req.params.id },
     include: [
@@ -70,8 +71,9 @@ router.post('/', (req, res) => {
 });
 
 // update product
-router.put('/:id', (req, res) => {
+
   // update product data
+  router.put('/:id', (req, res) => {
   Product.update(req.body, {
     where: {
       id: req.params.id,
